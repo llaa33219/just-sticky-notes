@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Sticky Notes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Sign-In -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+</head>
+<body>
+    <div id="login-screen">
+        <div class="welcome-notes">
+            <div class="welcome-note">Just</div>
+            <div class="welcome-note">Sticky</div>
+            <div class="welcome-note">Notes</div>
+        </div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    </div>
+
+    <div id="workspace">
+        <div class="user-info">
+            <img src="/api/placeholder/30/30" alt="User Avatar" class="user-avatar" id="user-avatar">
+            <span id="user-name">User Name</span>
+            <button class="logout-btn" id="logout-btn" onclick="signOut()">Logout</button>
+        </div>
+        
+        <div class="toolbar">
+            <button class="tool-btn" id="add-note-btn">
+                <i class="fas fa-sticky-note"></i> Add Note
+            </button>
+            <button class="tool-btn" id="add-pin-btn">
+                <i class="fas fa-thumbtack"></i> Add Pin
+            </button>
+            <button class="tool-btn" id="add-string-btn">
+                <i class="fas fa-expand-arrows-alt"></i> Connect Pins
+            </button>
+            <button class="tool-btn" id="clear-selection-btn">
+                <i class="fas fa-times"></i> Cancel
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

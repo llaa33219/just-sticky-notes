@@ -1,0 +1,26 @@
+name = "just-sticky-notes"
+type = "javascript"
+account_id = "e22a8e392dcb1319fcb607ca77401014"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2025-01-01"
+
+[build]
+command = ""
+[build.upload]
+format = "service-worker"
+
+# KV Namespace binding
+[[kv_namespaces]]
+binding = "just-sticky-notes-KV"
+id = "c9765aa7285a402aa817b68cfddb1703"
+preview_id = "c9765aa7285a402aa817b68cfddb1703"
+
+# Environment variables
+[vars]
+ALLOWED_ORIGINS = "https://just-sticky-notes.lukems903.workers.dev,http://localhost:8080"
+
+# Production environment
+[env.production]
+route = "https://just-sticky-notes.lukems903.workers.dev/*"
