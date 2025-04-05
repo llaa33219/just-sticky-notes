@@ -24,3 +24,7 @@ ALLOWED_ORIGINS = "https://just-sticky-notes.lukems903.workers.dev,http://localh
 # Production environment
 [env.production]
 route = "https://just-sticky-notes.lukems903.workers.dev/*"
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
